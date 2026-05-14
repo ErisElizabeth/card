@@ -1,480 +1,609 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Stacy Elizabeth Jones</title>
-  <meta name="description" content="Stacy Elizabeth Jones — I build worlds." />
-  <meta name="theme-color" content="#333232" />
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Stacy Elizabeth Jones</title>
+    <meta
+      name="description"
+      content="Stacy Elizabeth Jones — I build worlds."
+    />
+    <meta name="theme-color" content="#333232" />
 
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" type="image/svg+xml" href="icon.svg" />
-  <link rel="apple-touch-icon" href="icon.svg" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Stacy E. Jones" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Stacy E. Jones" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <style>
-    :root {
-      --ink: #333232;
-      --paper: #f6f2ec;
-      --paper-soft: #ece6dc;
-      --line: rgba(51, 50, 50, 0.18);
-      --accent: #333232;
-    }
+    <style>
+      :root {
+        --ink: #333232;
+        --paper: #f6f2ec;
+        --paper-soft: #ece6dc;
+        --line: rgba(51, 50, 50, 0.18);
+        --accent: #333232;
+      }
 
-    * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "EB Garamond", Garamond, "Adobe Garamond Pro", "Times New Roman", serif;
-      font-size: 18px;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      min-height: 100dvh;
-    }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          "EB Garamond", Garamond, "Adobe Garamond Pro", "Times New Roman",
+          serif;
+        font-size: 18px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        min-height: 100dvh;
+      }
 
-    body {
-      display: flex;
-      justify-content: center;
-      padding: max(env(safe-area-inset-top), 24px) 16px max(env(safe-area-inset-bottom), 24px);
-    }
+      body {
+        display: flex;
+        justify-content: center;
+        padding: max(env(safe-area-inset-top), 24px) 16px
+          max(env(safe-area-inset-bottom), 24px);
+      }
 
-    main.card {
-      width: 100%;
-      max-width: 460px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 36px 28px 28px;
-      box-shadow: 0 20px 60px -30px rgba(51, 50, 50, 0.35);
-    }
+      main.card {
+        width: 100%;
+        max-width: 460px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 36px 28px 28px;
+        box-shadow: 0 20px 60px -30px rgba(51, 50, 50, 0.35);
+      }
 
-    .header {
-      text-align: center;
-      padding-bottom: 22px;
-      border-bottom: 1px solid var(--line);
-    }
+      .header {
+        text-align: center;
+        padding-bottom: 22px;
+        border-bottom: 1px solid var(--line);
+      }
 
-    .monogram {
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 14px;
-      border-radius: 50%;
-      background: var(--ink);
-      color: var(--paper);
-      display: grid;
-      place-items: center;
-      font-size: 22px;
-      letter-spacing: 0.08em;
-      font-weight: 500;
-    }
+      .monogram {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 14px;
+        border-radius: 50%;
+        background: var(--ink);
+        color: var(--paper);
+        display: grid;
+        place-items: center;
+        font-size: 22px;
+        letter-spacing: 0.08em;
+        font-weight: 500;
+      }
 
-    h1 {
-      margin: 0;
-      font-weight: 500;
-      font-size: 1.9rem;
-      letter-spacing: 0.01em;
-    }
+      h1 {
+        margin: 0;
+        font-weight: 500;
+        font-size: 1.9rem;
+        letter-spacing: 0.01em;
+      }
 
-    .tagline {
-      margin: 6px 0 0;
-      font-style: italic;
-      font-size: 1.1rem;
-      color: var(--ink);
-      opacity: 0.78;
-    }
+      .tagline {
+        margin: 6px 0 0;
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--ink);
+        opacity: 0.78;
+      }
 
-    ul.links {
-      list-style: none;
-      padding: 0;
-      margin: 18px 0 0;
-    }
+      ul.links {
+        list-style: none;
+        padding: 0;
+        margin: 18px 0 0;
+      }
 
-    ul.links li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+      ul.links li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
 
-    ul.links li + li {
-      border-top: 1px solid var(--line);
-    }
+      ul.links li + li {
+        border-top: 1px solid var(--line);
+      }
 
-    ul.links a {
-      flex: 1;
-      min-width: 0;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 6px;
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 1.05rem;
-    }
+      ul.links a {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 6px;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 1.05rem;
+      }
 
-    ul.links a:active { background: var(--paper-soft); }
+      ul.links a:active {
+        background: var(--paper-soft);
+      }
 
-    .icon {
-      width: 22px;
-      height: 22px;
-      flex-shrink: 0;
-      stroke: var(--ink);
-      stroke-width: 1.4;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+      .icon {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+        stroke: var(--ink);
+        stroke-width: 1.4;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
 
-    .label { flex: 1; min-width: 0; }
-    .label .primary { display: block; }
-    .label .secondary {
-      display: block;
-      font-size: 0.85rem;
-      opacity: 0.6;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+      .label {
+        flex: 1;
+        min-width: 0;
+      }
+      .label .primary {
+        display: block;
+      }
+      .label .secondary {
+        display: block;
+        font-size: 0.85rem;
+        opacity: 0.6;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
 
-    .copy-btn {
-      flex-shrink: 0;
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: transparent;
-      cursor: pointer;
-      color: var(--ink);
-      padding: 0;
-      -webkit-tap-highlight-color: transparent;
-      transition: background 0.15s ease, border-color 0.15s ease;
-    }
+      .copy-btn {
+        flex-shrink: 0;
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: transparent;
+        cursor: pointer;
+        color: var(--ink);
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+        transition:
+          background 0.15s ease,
+          border-color 0.15s ease;
+      }
 
-    .copy-btn:active { background: var(--paper-soft); }
-    .copy-btn.copied { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+      .copy-btn:active {
+        background: var(--paper-soft);
+      }
+      .copy-btn.copied {
+        background: var(--ink);
+        color: var(--paper);
+        border-color: var(--ink);
+      }
 
-    .copy-btn svg {
-      width: 16px; height: 16px;
-      stroke: currentColor;
-      stroke-width: 1.6;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+      .copy-btn svg {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+        stroke-width: 1.6;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
 
-    .save-btn, .qr-btn {
-      display: block;
-      width: 100%;
-      margin-top: 22px;
-      padding: 14px 16px;
-      background: var(--ink);
-      color: var(--paper);
-      border: none;
-      border-radius: 12px;
-      font-family: inherit;
-      font-size: 1.05rem;
-      letter-spacing: 0.02em;
-      cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
-    }
+      .save-btn,
+      .qr-btn {
+        display: block;
+        width: 100%;
+        margin-top: 22px;
+        padding: 14px 16px;
+        background: var(--ink);
+        color: var(--paper);
+        border: none;
+        border-radius: 12px;
+        font-family: inherit;
+        font-size: 1.05rem;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+      }
 
-    .save-btn:active, .qr-btn:active { transform: scale(0.99); }
+      .save-btn:active,
+      .qr-btn:active {
+        transform: scale(0.99);
+      }
 
-    .qr-btn {
-      background: transparent;
-      color: var(--ink);
-      border: 1px solid var(--line);
-      margin-top: 10px;
-    }
+      .qr-btn {
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        margin-top: 10px;
+      }
 
-    .qr-panel {
-      margin-top: 18px;
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      text-align: center;
-      display: none;
-    }
+      .qr-panel {
+        margin-top: 18px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        text-align: center;
+        display: none;
+      }
 
-    .qr-panel.open { display: block; }
+      .qr-panel.open {
+        display: block;
+      }
 
-    .qr-panel svg {
-      width: 100%;
-      max-width: 260px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      image-rendering: pixelated;
-    }
+      .qr-panel svg {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        image-rendering: pixelated;
+      }
 
-    .qr-panel .qr-caption {
-      margin: 12px 0 0;
-      font-size: 0.9rem;
-      opacity: 0.65;
-      font-style: italic;
-    }
+      .qr-panel .qr-caption {
+        margin: 12px 0 0;
+        font-size: 0.9rem;
+        opacity: 0.65;
+        font-style: italic;
+      }
 
-    .qr-actions {
-      margin-top: 14px;
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-    }
+      .qr-actions {
+        margin-top: 14px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
 
-    .qr-actions button {
-      flex: 1;
-      max-width: 130px;
-      padding: 10px 14px;
-      background: transparent;
-      color: var(--ink);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
-    }
+      .qr-actions button {
+        flex: 1;
+        max-width: 130px;
+        padding: 10px 14px;
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        font-family: inherit;
+        font-size: 0.95rem;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+      }
 
-    .qr-actions button:active { background: var(--paper-soft); }
+      .qr-actions button:active {
+        background: var(--paper-soft);
+      }
 
-    footer {
-      margin-top: 18px;
-      text-align: center;
-      font-size: 0.78rem;
-      opacity: 0.45;
-      font-style: italic;
-    }
-  </style>
-</head>
-<body>
-  <main class="card">
-    <header class="header">
-      <div class="monogram" aria-hidden="true">SEJ</div>
-      <h1>Stacy Elizabeth Jones</h1>
-      <p class="tagline">I build worlds.</p>
-    </header>
+      footer {
+        margin-top: 18px;
+        text-align: center;
+        font-size: 0.78rem;
+        opacity: 0.45;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <header class="header">
+        <div class="monogram" aria-hidden="true">SEJ</div>
+        <h1>Stacy Elizabeth Jones</h1>
+        <p class="tagline">I build worlds.</p>
+      </header>
 
-    <ul class="links">
-      <li>
-        <a href="mailto:contact@eriselizabeth.com">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          <span class="label">
-            <span class="primary">Email</span>
-            <span class="secondary">contact@eriselizabeth.com</span>
-          </span>
-        </a>
-        <button class="copy-btn" type="button" data-copy="contact@eriselizabeth.com" aria-label="Copy email">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg>
-        </button>
-      </li>
-      <li>
-        <a href="https://eriselizabeth.com" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg>
-          <span class="label">
-            <span class="primary">Website</span>
-            <span class="secondary">eriselizabeth.com</span>
-          </span>
-        </a>
-        <button class="copy-btn" type="button" data-copy="https://eriselizabeth.com" aria-label="Copy website link">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg>
-        </button>
-      </li>
-      <li>
-        <a href="https://sacredtextstudies.substack.com" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 11h16M4 16h16v4l-8-3-8 3z"/></svg>
-          <span class="label">
-            <span class="primary">Substack</span>
-            <span class="secondary">sacredtextstudies.substack.com</span>
-          </span>
-        </a>
-        <button class="copy-btn" type="button" data-copy="https://sacredtextstudies.substack.com" aria-label="Copy Substack link">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg>
-        </button>
-      </li>
-      <li>
-        <a href="https://github.com/ErisElizabeth" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 00-3 18.5c.5.1.7-.2.7-.5v-2c-2.6.6-3.2-1.2-3.2-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.1-.2-4.3-1-4.3-4.6 0-1 .4-1.9 1-2.5-.1-.3-.4-1.2.1-2.5 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.2.1 2.5.6.6 1 1.5 1 2.5 0 3.6-2.2 4.4-4.3 4.6.3.3.6.9.6 1.8v2.6c0 .3.2.6.7.5A9.5 9.5 0 0012 2.5z"/></svg>
-          <span class="label">
-            <span class="primary">GitHub</span>
-            <span class="secondary">github.com/ErisElizabeth</span>
-          </span>
-        </a>
-        <button class="copy-btn" type="button" data-copy="https://github.com/ErisElizabeth" aria-label="Copy GitHub link">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg>
-        </button>
-      </li>
-      <li>
-        <a href="https://bsky.app/profile/sigewynn.bsky.social" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4c2 1 5 4 6 8 1-4 4-7 6-8 2 0 3 1 3 3 0 3-2 5-4 6 2 0 3 1 3 3s-2 3-4 2c-2-1-3-3-4-5-1 2-2 4-4 5-2 1-4 0-4-2s1-3 3-3c-2-1-4-3-4-6 0-2 1-3 3-3z"/></svg>
-          <span class="label">
-            <span class="primary">Bluesky</span>
-            <span class="secondary">@sigewynn.bsky.social</span>
-          </span>
-        </a>
-        <button class="copy-btn" type="button" data-copy="https://bsky.app/profile/sigewynn.bsky.social" aria-label="Copy Bluesky link">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg>
-        </button>
-      </li>
-    </ul>
+      <ul class="links">
+        <li>
+          <a href="mailto:contact@eriselizabeth.com">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="M3 7l9 6 9-6" />
+            </svg>
+            <span class="label">
+              <span class="primary">Email</span>
+              <span class="secondary">contact@eriselizabeth.com</span>
+            </span>
+          </a>
+          <button
+            class="copy-btn"
+            type="button"
+            data-copy="contact@eriselizabeth.com"
+            aria-label="Copy email"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2" />
+              <path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2" />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a href="https://eriselizabeth.com" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path
+                d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"
+              />
+            </svg>
+            <span class="label">
+              <span class="primary">Website</span>
+              <span class="secondary">eriselizabeth.com</span>
+            </span>
+          </a>
+          <button
+            class="copy-btn"
+            type="button"
+            data-copy="https://eriselizabeth.com"
+            aria-label="Copy website link"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2" />
+              <path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2" />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a
+            href="https://sacredtextstudies.substack.com"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h16M4 11h16M4 16h16v4l-8-3-8 3z" />
+            </svg>
+            <span class="label">
+              <span class="primary">Substack</span>
+              <span class="secondary">sacredtextstudies.substack.com</span>
+            </span>
+          </a>
+          <button
+            class="copy-btn"
+            type="button"
+            data-copy="https://sacredtextstudies.substack.com"
+            aria-label="Copy Substack link"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2" />
+              <path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2" />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a
+            href="https://github.com/ErisElizabeth"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2.5a9.5 9.5 0 00-3 18.5c.5.1.7-.2.7-.5v-2c-2.6.6-3.2-1.2-3.2-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.1-.2-4.3-1-4.3-4.6 0-1 .4-1.9 1-2.5-.1-.3-.4-1.2.1-2.5 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.2.1 2.5.6.6 1 1.5 1 2.5 0 3.6-2.2 4.4-4.3 4.6.3.3.6.9.6 1.8v2.6c0 .3.2.6.7.5A9.5 9.5 0 0012 2.5z"
+              />
+            </svg>
+            <span class="label">
+              <span class="primary">GitHub</span>
+              <span class="secondary">github.com/ErisElizabeth</span>
+            </span>
+          </a>
+          <button
+            class="copy-btn"
+            type="button"
+            data-copy="https://github.com/ErisElizabeth"
+            aria-label="Copy GitHub link"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2" />
+              <path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2" />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a
+            href="https://bsky.app/profile/sigewynn.bsky.social"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 4c2 1 5 4 6 8 1-4 4-7 6-8 2 0 3 1 3 3 0 3-2 5-4 6 2 0 3 1 3 3s-2 3-4 2c-2-1-3-3-4-5-1 2-2 4-4 5-2 1-4 0-4-2s1-3 3-3c-2-1-4-3-4-6 0-2 1-3 3-3z"
+              />
+            </svg>
+            <span class="label">
+              <span class="primary">Bluesky</span>
+              <span class="secondary">@sigewynn.bsky.social</span>
+            </span>
+          </a>
+          <button
+            class="copy-btn"
+            type="button"
+            data-copy="https://bsky.app/profile/sigewynn.bsky.social"
+            aria-label="Copy Bluesky link"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2" />
+              <path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2" />
+            </svg>
+          </button>
+        </li>
+      </ul>
 
-    <button class="save-btn" id="saveBtn" type="button">Save to Contacts</button>
-    <button class="qr-btn save-btn" id="qrBtn" type="button" aria-expanded="false" aria-controls="qrPanel">Show QR Code</button>
+      <button class="save-btn" id="saveBtn" type="button">
+        Save to Contacts
+      </button>
+      <button
+        class="qr-btn save-btn"
+        id="qrBtn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="qrPanel"
+      >
+        Show QR Code
+      </button>
 
-    <section class="qr-panel" id="qrPanel" aria-live="polite">
-      <div id="qrTarget"></div>
-      <p class="qr-caption">Scan to open this card</p>
-      <div class="qr-actions">
-        <button type="button" id="qrPng">Download PNG</button>
-        <button type="button" id="qrSvg">Download SVG</button>
-      </div>
-    </section>
+      <section class="qr-panel" id="qrPanel" aria-live="polite">
+        <div id="qrTarget"></div>
+        <p class="qr-caption">Scan to open this card</p>
+        <div class="qr-actions">
+          <button type="button" id="qrPng">Download PNG</button>
+          <button type="button" id="qrSvg">Download SVG</button>
+        </div>
+      </section>
 
-    <footer>Tap the box on the left to copy.</footer>
-  </main>
+      <footer></footer>
+    </main>
 
-  <script>
-    // The URL the QR code encodes. Edit this if you ever move the card.
-    const CARD_URL = "https://card.eriselizabeth.com/";
+    <script>
+      // The URL the QR code encodes. Edit this if you ever move the card.
+      const CARD_URL = "https://card.eriselizabeth.com/";
 
-    const VCARD = [
-      "BEGIN:VCARD",
-      "VERSION:3.0",
-      "N:Jones;Stacy;Elizabeth;;",
-      "FN:Stacy Elizabeth Jones",
-      "EMAIL;TYPE=INTERNET:contact@eriselizabeth.com",
-      "URL;TYPE=Website:https://eriselizabeth.com",
-      "URL;TYPE=Substack:https://sacredtextstudies.substack.com",
-      "URL;TYPE=GitHub:https://github.com/ErisElizabeth",
-      "URL;TYPE=Bluesky:https://bsky.app/profile/sigewynn.bsky.social",
-      "NOTE:I build worlds.",
-      "END:VCARD"
-    ].join("\r\n");
+      const VCARD = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "N:Jones;Stacy;Elizabeth;;",
+        "FN:Stacy Elizabeth Jones",
+        "EMAIL;TYPE=INTERNET:contact@eriselizabeth.com",
+        "URL;TYPE=Website:https://eriselizabeth.com",
+        "URL;TYPE=Substack:https://sacredtextstudies.substack.com",
+        "URL;TYPE=GitHub:https://github.com/ErisElizabeth",
+        "URL;TYPE=Bluesky:https://bsky.app/profile/sigewynn.bsky.social",
+        "NOTE:I build worlds.",
+        "END:VCARD",
+      ].join("\r\n");
 
-    document.getElementById("saveBtn").addEventListener("click", () => {
-      const blob = new Blob([VCARD], { type: "text/vcard;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "stacy-elizabeth-jones.vcf";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
-    });
+      document.getElementById("saveBtn").addEventListener("click", () => {
+        const blob = new Blob([VCARD], { type: "text/vcard;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "stacy-elizabeth-jones.vcf";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
 
-    // copy-to-clipboard for each link row
-    const COPY_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg>';
-    const CHECK_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>';
-    document.querySelectorAll(".copy-btn").forEach((btn) => {
-      btn.addEventListener("click", async (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const value = btn.dataset.copy;
-        try {
-          await navigator.clipboard.writeText(value);
-        } catch {
-          const ta = document.createElement("textarea");
-          ta.value = value;
-          ta.style.position = "fixed";
-          ta.style.opacity = "0";
-          document.body.appendChild(ta);
-          ta.select();
-          try { document.execCommand("copy"); } catch {}
-          ta.remove();
+      // copy-to-clipboard for each link row
+      const COPY_ICON =
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg>';
+      const CHECK_ICON =
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>';
+      document.querySelectorAll(".copy-btn").forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const value = btn.dataset.copy;
+          try {
+            await navigator.clipboard.writeText(value);
+          } catch {
+            const ta = document.createElement("textarea");
+            ta.value = value;
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+              document.execCommand("copy");
+            } catch {}
+            ta.remove();
+          }
+          btn.classList.add("copied");
+          btn.innerHTML = CHECK_ICON;
+          setTimeout(() => {
+            btn.classList.remove("copied");
+            btn.innerHTML = COPY_ICON;
+          }, 1300);
+        });
+      });
+
+      // QR code — toggle panel, render lazily
+      const qrBtn = document.getElementById("qrBtn");
+      const qrPanel = document.getElementById("qrPanel");
+      const qrTarget = document.getElementById("qrTarget");
+      let qrRendered = false;
+      qrBtn.addEventListener("click", () => {
+        const open = qrPanel.classList.toggle("open");
+        qrBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        qrBtn.textContent = open ? "Hide QR Code" : "Show QR Code";
+        if (open && !qrRendered) {
+          const qr = qrcode(0, "M");
+          qr.addData(CARD_URL);
+          qr.make();
+          qrTarget.innerHTML = qr.createSvgTag({ scalable: true, margin: 2 });
+          qrRendered = true;
         }
-        btn.classList.add("copied");
-        btn.innerHTML = CHECK_ICON;
-        setTimeout(() => {
-          btn.classList.remove("copied");
-          btn.innerHTML = COPY_ICON;
-        }, 1300);
       });
-    });
 
-    // QR code — toggle panel, render lazily
-    const qrBtn = document.getElementById("qrBtn");
-    const qrPanel = document.getElementById("qrPanel");
-    const qrTarget = document.getElementById("qrTarget");
-    let qrRendered = false;
-    qrBtn.addEventListener("click", () => {
-      const open = qrPanel.classList.toggle("open");
-      qrBtn.setAttribute("aria-expanded", open ? "true" : "false");
-      qrBtn.textContent = open ? "Hide QR Code" : "Show QR Code";
-      if (open && !qrRendered) {
-        const qr = qrcode(0, "M");
-        qr.addData(CARD_URL);
-        qr.make();
-        qrTarget.innerHTML = qr.createSvgTag({ scalable: true, margin: 2 });
-        qrRendered = true;
+      function downloadBlob(blob, name) {
+        const u = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = u;
+        a.download = name;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(u), 1000);
       }
-    });
 
-    function downloadBlob(blob, name) {
-      const u = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = u;
-      a.download = name;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(() => URL.revokeObjectURL(u), 1000);
-    }
-
-    function currentQrSvg() {
-      const svg = qrTarget.querySelector("svg");
-      if (!svg) return null;
-      const clone = svg.cloneNode(true);
-      clone.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-      if (!clone.getAttribute("viewBox")) {
-        const w = clone.getAttribute("width") || "100";
-        const h = clone.getAttribute("height") || "100";
-        clone.setAttribute("viewBox", `0 0 ${w} ${h}`);
+      function currentQrSvg() {
+        const svg = qrTarget.querySelector("svg");
+        if (!svg) return null;
+        const clone = svg.cloneNode(true);
+        clone.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+        if (!clone.getAttribute("viewBox")) {
+          const w = clone.getAttribute("width") || "100";
+          const h = clone.getAttribute("height") || "100";
+          clone.setAttribute("viewBox", `0 0 ${w} ${h}`);
+        }
+        return new XMLSerializer().serializeToString(clone);
       }
-      return new XMLSerializer().serializeToString(clone);
-    }
 
-    document.getElementById("qrSvg").addEventListener("click", () => {
-      const svg = currentQrSvg();
-      if (!svg) return;
-      downloadBlob(new Blob([svg], { type: "image/svg+xml;charset=utf-8" }), "stacy-elizabeth-jones-qr.svg");
-    });
-
-    document.getElementById("qrPng").addEventListener("click", () => {
-      const svg = currentQrSvg();
-      if (!svg) return;
-      const size = 1024;
-      const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = size;
-        canvas.height = size;
-        const ctx = canvas.getContext("2d");
-        ctx.fillStyle = "#ffffff";
-        ctx.fillRect(0, 0, size, size);
-        ctx.drawImage(img, 0, 0, size, size);
-        canvas.toBlob((blob) => {
-          if (blob) downloadBlob(blob, "stacy-elizabeth-jones-qr.png");
-        }, "image/png");
-      };
-      img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
-    });
-
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("service-worker.js").catch(() => {});
+      document.getElementById("qrSvg").addEventListener("click", () => {
+        const svg = currentQrSvg();
+        if (!svg) return;
+        downloadBlob(
+          new Blob([svg], { type: "image/svg+xml;charset=utf-8" }),
+          "stacy-elizabeth-jones-qr.svg",
+        );
       });
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
-</body>
+
+      document.getElementById("qrPng").addEventListener("click", () => {
+        const svg = currentQrSvg();
+        if (!svg) return;
+        const size = 1024;
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          canvas.width = size;
+          canvas.height = size;
+          const ctx = canvas.getContext("2d");
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(0, 0, size, size);
+          ctx.drawImage(img, 0, 0, size, size);
+          canvas.toBlob((blob) => {
+            if (blob) downloadBlob(blob, "stacy-elizabeth-jones-qr.png");
+          }, "image/png");
+        };
+        img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+      });
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("service-worker.js").catch(() => {});
+        });
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  </body>
 </html>
