@@ -98,11 +98,19 @@
       margin: 18px 0 0;
     }
 
+    ul.links li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     ul.links li + li {
       border-top: 1px solid var(--line);
     }
 
     ul.links a {
+      flex: 1;
+      min-width: 0;
       display: flex;
       align-items: center;
       gap: 14px;
